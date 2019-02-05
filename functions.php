@@ -100,26 +100,6 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Hero Canvas', 'cream' ),
-        'id' => 'herocanvas',
-        'description' => 'Full size canvas hero area for Bootstrap and other custom HTML markup',
-        'before_widget' => '',
-        'after_widget' => '',
-        'before_title' => '',
-        'after_title' => ''
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Top Full above', 'cream' ),
-        'id' => 'statichero',
-        'description' => 'Full top above widget with dynamic grid',
-        'before_widget' => '<div id="%1$s" class="static-hero-widget %2$s '. st2_slbd_count_widgets( 'statichero' ) .'">',
-        'after_widget' => '</div><!-- .static-hero-widget -->',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
         'name' => __( 'Top Full', 'cream' ),
         'id' => 'statichero',
         'description' => 'Full top widget with dynamic grid',
@@ -127,6 +107,16 @@ function st2_widgets_init() {
         'after_widget' => '</div><!-- .static-hero-widget -->',
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>'
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Hero Canvas', 'cream' ),
+        'id' => 'herocanvas',
+        'description' => 'Full size canvas hero area for Bootstrap and other custom HTML markup',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => ''
     ) );
 
     register_sidebar( array(
