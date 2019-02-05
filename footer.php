@@ -8,7 +8,7 @@
                     </div>
                 </div>
             </div><?php endif; ?>
-            <div class="wrapper" id="wrapper-footer">
+            <div class="wrapper bg-dark text-white" id="wrapper-footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">

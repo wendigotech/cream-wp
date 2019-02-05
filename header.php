@@ -62,7 +62,7 @@
                         <a class="carousel-control-next" href="#HeroCarouselControls" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only"><?php _e( 'Next', 'cream' ); ?></span> </a>
                     </div>
                 </div><?php endif; ?>
-                <?php if ( is_active_sidebar( 'herocanvas' ) ) : ?><?php if ( is_active_sidebar( 'herocanvas' ) ) : ?><div class="wrapper container-fluid" id="wrapper-hero"><?php dynamic_sidebar( 'herocanvas' ); ?></div><?php endif; ?><?php endif; ?>
+                <?php if ( is_active_sidebar( 'herocanvas' ) ) : ?><?php if ( is_active_sidebar( 'herocanvas' ) ) : ?><div class="wrapper container-fluid w-50 float-right" id="wrapper-hero"><?php dynamic_sidebar( 'herocanvas' ); ?></div><?php endif; ?><?php endif; ?>
                 <?php if ( is_active_sidebar( 'statichero' ) ) : ?><div class="wrapper" id="wrapper-static-hero">
                     <div id="wrapper-static-content" tabindex="-1" class="container">
                         <div class="row">
