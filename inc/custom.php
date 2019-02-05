@@ -21,6 +21,9 @@ if (!isset($content_width)) {
 	$content_width = 640; /* pixels */
 }
 
+//* Add Gutenberg support
+add_theme_support( 'align-wide' );
+
 //* Customize Selective Refresh Widget
 add_theme_support('customize-selective-refresh-widgets');
 
