@@ -6,7 +6,9 @@ get_header(); ?>
         <div class="row">
 
             <div class="content-area col-md-12" id="primary">
-                <?php the_content(); ?>                                 
+                <main class="site-main" id="main">
+                    <div><?php the_content(); ?></div>
+                </main>                                 
             </div>
 
         </div>
