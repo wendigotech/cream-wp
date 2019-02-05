@@ -64,8 +64,11 @@
                 </div><?php endif; ?>
                 <?php if ( is_active_sidebar( 'herocanvas' ) ) : ?><?php if ( is_active_sidebar( 'herocanvas' ) ) : ?><div class="wrapper container-fluid" id="wrapper-hero"><?php dynamic_sidebar( 'herocanvas' ); ?></div><?php endif; ?><?php endif; ?>
                 <?php if ( is_active_sidebar( 'statichero' ) ) : ?><div class="wrapper" id="wrapper-static-hero">
-                    <div id="wrapper-static-content" tabindex="-1" class="container">
+                    <div id="wrapper-static-content" tabindex="-1" class="container-fluid">
                         <div class="row">
+                            <?php if ( is_active_sidebar( 'statichero' ) ) : ?><?php dynamic_sidebar( 'statichero' ); ?><?php endif; ?>
+                            
+                        </div><div class="row">
                             <?php if ( is_active_sidebar( 'statichero' ) ) : ?><?php dynamic_sidebar( 'statichero' ); ?><?php endif; ?>
                             
                         </div>
