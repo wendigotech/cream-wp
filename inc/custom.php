@@ -26,7 +26,6 @@ add_theme_support( 'wp-block-styles' );
 add_theme_support( 'align-wide' );
 add_theme_support( 'responsive-embeds' );
 
-
 //* Customize Selective Refresh Widget
 add_theme_support('customize-selective-refresh-widgets');
 
