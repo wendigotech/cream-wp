@@ -18,7 +18,7 @@
 
 <?php else : ?><?php the_custom_logo(); ?><?php endif; ?>
                             <!-- #colophon -->
-                        </div><div class="col-md-9">
+                        </div><?php if ( is_active_sidebar( 'endfull' ) ) : ?><?php dynamic_sidebar( 'endfull' ); ?><?php endif; ?><div class="col-md-12">
                             <footer class="site-footer flex-row d-flex justify-content-center" id="colophon">
                                 <div class="site-info">
                                     <p><?php echo get_theme_mod( 'footer_text', 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)' ); ?></p>
