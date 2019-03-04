@@ -11,18 +11,13 @@
             <div class="wrapper text-light bg-dark" id="wrapper-footer">
                 <div class="row d-flex align-items-center flex-row justify-content-center align-content-center">
                     <div class="col-md-4 text-center">
-                        <?php if ( ! has_custom_logo() ) : ?>
-                            <div>
-                                <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
-                            </div>
-                        <?php else : ?>
-                            <?php the_custom_logo(); ?>
-                        <?php endif; ?>                          
+                        <?php if ( ! has_custom_logo() ) : ?><div>
+                            <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
+                        </div>
+                        <?php else : ?><?php the_custom_logo(); ?><?php endif; ?>                                                  
                     </div>
                     <div class="col-md-8">
-                        <?php if ( is_active_sidebar( 'footerfull' ) ) : ?>
-                            <?php dynamic_sidebar( 'footerfull' ); ?>
-                        <?php endif; ?>                          
+                        <?php if ( is_active_sidebar( 'footerfull' ) ) : ?><?php dynamic_sidebar( 'footerfull' ); ?><?php endif; ?>                                                  
                     </div>
                 </div><div class="container">
                     <div class="row">
