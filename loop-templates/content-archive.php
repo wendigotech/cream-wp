@@ -13,7 +13,7 @@
                         <h2 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h2>
                     <?php endif; ?> 
                     <div class="entry-meta"> 
-                        <p><?php _e( 'Posted on', 'cream' ); ?> <span><?php the_modified_date(); ?></span> <?php _e( 'by', 'cream' ); ?> <span><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a></span></p> 
+                        <p><?php _e( 'Posted on', 'cream_wp' ); ?> <span><?php the_modified_date(); ?></span> <?php _e( 'by', 'cream_wp' ); ?> <span><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a></span></p> 
                     </div>                     
                 </header>                 
                 <?php
@@ -23,14 +23,14 @@
                  ?> 
                 <div class="entry-content"> 
                     <?php the_excerpt( ); ?> 
-                    <a class="btn btn-primary" href="<?php echo esc_url( get_permalink() ); ?>"><?php _e( 'Read More', 'cream' ); ?></a> 
+                    <a class="btn btn-primary" href="<?php echo esc_url( get_permalink() ); ?>"><?php _e( 'Read More', 'cream_wp' ); ?></a> 
                 </div>                 
                 <footer class="entry-footer"></footer>                 
             </article>
         <?php endwhile; ?>
     <?php else : ?>
-        <p><?php _e( 'Sorry, no posts matched your criteria.', 'cream' ); ?></p>
+        <p><?php _e( 'Sorry, no posts matched your criteria.', 'cream_wp' ); ?></p>
     <?php endif; ?> 
     <nav aria-label="Posts navigation"> 
-        <?php posts_nav_link( null, __( '&#xAB; Newer Posts', 'cream' ), __( 'Older Posts &#xBB;', 'cream' ) ); ?> 
+        <?php posts_nav_link( null, __( '&#xAB; Newer Posts', 'cream_wp' ), __( 'Older Posts &#xBB;', 'cream_wp' ) ); ?> 
     </nav>     

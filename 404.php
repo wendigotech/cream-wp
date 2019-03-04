@@ -8,18 +8,18 @@ get_header(); ?>
                 <main class="site-main mb-5" id="main">
                     <section class="error-404 not-found">
                         <header class="page-header">
-                            <h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'cream' ); ?></h1>
+                            <h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'cream_wp' ); ?></h1>
                         </header>
                         <!-- .page-header -->
                         <div class="page-content">
-                            <p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'cream' ); ?></p>
+                            <p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'cream_wp' ); ?></p>
                             <?php get_search_form( true ); ?>
                             <div class="mt-4 mb-2"></div>
                             <?php the_widget( 'WP_Widget_Recent_Posts', array(
                                     'number' => '5'
                             ) ); ?>
                             <div class="mt-4 mb-2"></div>
-                            <h2 class="widget-title"><?php _e( 'Most Used Categories', 'cream' ); ?></h2>
+                            <h2 class="widget-title"><?php _e( 'Most Used Categories', 'cream_wp' ); ?></h2>
                             <div class="widget widget_categories">
                                 <ul><?php wp_list_categories( array(
                                             'orderby' => 'count',
