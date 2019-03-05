@@ -327,6 +327,12 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
     wp_deregister_style( 'style-3' );
     wp_enqueue_style( 'style-3', 'https://fonts.googleapis.com/css?family=Baloo', false, null, 'all');
 
+    wp_deregister_style( 'style-4' );
+    wp_enqueue_style( 'style-4', 'https://fonts.googleapis.com/css?family=Pacifico', false, null, 'all');
+
+    wp_deregister_style( 'style-5' );
+    wp_enqueue_style( 'style-5', 'https://fonts.googleapis.com/css?family=Acme', false, null, 'all');
+
     /* Pinegrow generated Enqueue Styles End */
 
     }
