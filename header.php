@@ -32,7 +32,7 @@
                                 <?php else : ?>
                                     <?php the_custom_logo(); ?>
                                 <?php endif; ?>
-                                <h1 class="text-white text-center"><?php _e( 'Cream Catering Supplies', 'cream' ); ?></h1>
+                                <h1 class="text-white text-center"><?php bloginfo( 'name' ); ?></h1>
                             </div>
                             
                             <div class="row">
