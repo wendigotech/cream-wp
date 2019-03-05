@@ -53,9 +53,23 @@ nav h1 {
     font-size: 1.5rem;
 }
 
+.navbar .nav-item:hover {
+    font-family: Pacifico;
+    font-size: 2vw;
+    background-color: #000000;
+    background-clip: content-box;
+    text-align: center;
+    border-radius: 23px;
+    -webkit-box-shadow: 1px 2px 3px;
+    box-shadow: 1px 2px 3px;
+    font-weight: 800;
+}
+
 .navbar .nav-item {
-    font-family: Cookie;
-    font-weight: 900;
-    border-radius: 35px;
-    border: 1px solid #ffffff;
+    font-family: Pacifico;
+    font-size: 2vw;
+    background-color: rgba(0, 0, 0, 0.74);
+    background-clip: content-box;
+    text-align: center;
+    border-radius: 23px;
 }
