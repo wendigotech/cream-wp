@@ -29,7 +29,7 @@
                                     <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
                                 </div>
                                 <?php else : ?><?php the_custom_logo(); ?><?php endif; ?>
-                                <h1 class="text-white text-center" href="<?php echo esc_url( home_url() ); ?>"><?php _e( 'Cream Catering Supplies', 'cream' ); ?></h1>
+                                <h1 class="text-white text-center link" href="<?php echo esc_url( home_url() ); ?>"><?php _e( 'Cream Catering Supplies', 'cream' ); ?></h1>
                             </div>
                             
                             <div class="row">
