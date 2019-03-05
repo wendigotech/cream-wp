@@ -318,6 +318,12 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
     wp_deregister_style( 'woocommerce' );
     wp_enqueue_style( 'woocommerce', get_template_directory_uri() . '/css/woocommerce.css', false, null, 'all');
 
+    wp_deregister_style( 'style-1' );
+    wp_enqueue_style( 'style-1', 'https://fonts.googleapis.com/css?family=Cookie', false, null, 'all');
+
+    wp_deregister_style( 'style-2' );
+    wp_enqueue_style( 'style-2', 'https://fonts.googleapis.com/css?family=Lobster', false, null, 'all');
+
     /* Pinegrow generated Enqueue Styles End */
 
     }

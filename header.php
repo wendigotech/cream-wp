@@ -24,23 +24,35 @@
                     <a class="skip-link sr-only sr-only-focusable" href="#content"><?php _e( 'Skip to content', 'cream' ); ?></a>
                     <nav class="navbar bg-primary navbar-dark navbar-expand-lg"> 
                         <div class="container">
-                            <?php if ( ! has_custom_logo() ) : ?><div>
-                                <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
+                            <div class="row">
+                                <?php if ( ! has_custom_logo() ) : ?>
+                                    <div> 
+                                        <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
+                                    </div>
+                                <?php else : ?>
+                                    <?php the_custom_logo(); ?>
+                                <?php endif; ?>
+                                <h1 class="text-white"><?php _e( 'Cream Catering Supplies', 'cream' ); ?></h1>
                             </div>
-                            <?php else : ?><?php the_custom_logo(); ?><?php endif; ?>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'st2' ); ?>"> 
-                                <span class="navbar-toggler-icon"></span> 
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarToggler6"> 
-                                <?php if ( has_nav_menu( 'primary' ) ) : ?><?php wp_nav_menu( array(
-                                            'menu' => 'primary',
-                                            'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto ',
-                                            'container' => '',
-                                            'depth' => '2',
-                                            'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
-                                            'walker' => new wp_bootstrap4_navwalker()
-                                    ) ); ?><?php endif; ?>                                 
+                            
+                            <div class="row">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'st2' ); ?>"> 
+                                    <span class="navbar-toggler-icon"></span> 
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarToggler6"> 
+                                    <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                                        <?php wp_nav_menu( array(
+                                                'menu' => 'primary',
+                                                'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto',
+                                                'container' => '',
+                                                'depth' => '2',
+                                                'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
+                                                'walker' => new wp_bootstrap4_navwalker()
+                                        ) ); ?>
+                                    <?php endif; ?> 
+                                </div>
                             </div>
+                            
                         </div>                         
                     </nav>
                 </div>
