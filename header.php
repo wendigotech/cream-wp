@@ -24,7 +24,7 @@
                     <a class="skip-link sr-only sr-only-focusable" href="#content"><?php _e( 'Skip to content', 'cream' ); ?></a>
                     <nav class="navbar bg-primary navbar-dark navbar-expand-lg"> 
                         <div class="container">
-                            <div class="row">
+                            <div class="row no-gutters d-flex flex-column align-items-center justify-content-center align-content-center">
                                 <?php if ( ! has_custom_logo() ) : ?>
                                     <div> 
                                         <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
