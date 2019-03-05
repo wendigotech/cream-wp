@@ -26,3 +26,23 @@ figure,
 #page {
     word-wrap: break-word;
 }
+
+#wrapper-footer-full,
+#wrapper-static-hero {
+    background-color: #e9ecef;
+    background-image: url("https://images.unsplash.com/photo-1504548840739-580b10ae7715?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjIwOTIyfQ");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: color-burn;
+}
+
+.bg-primary {
+    background-color: #940000 !important;
+}
+
+a {
+    color: #940000;
+    text-decoration: none;
+    background-color: transparent;
+}
