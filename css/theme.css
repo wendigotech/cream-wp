@@ -54,10 +54,8 @@ nav h1 {
 }
 
 .navbar .nav-item {
-    background: -webkit-gradient(linear, left top, right top, from(#000000), to(#434343));
-    background: -webkit-linear-gradient(left, #000000, #434343);
-    background: -o-linear-gradient(left, #000000, #434343);
-    background: linear-gradient(90deg, #000000, #434343);
     font-family: Cookie;
-    font-weight: 700;
+    font-weight: 900;
+    border-radius: 35px;
+    border: 1px solid #ffffff;
 }
