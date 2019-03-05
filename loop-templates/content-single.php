@@ -5,7 +5,7 @@
                 <header class="entry-header"> 
                     <h1><?php the_title(); ?></h1> 
                     <div class="entry-meta"> 
-                        <p><?php _e( 'Posted on', 'cream_wp' ); ?> <span><?php the_modified_date(); ?></span> <?php _e( 'by', 'cream_wp' ); ?> <span><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a></span></p> 
+                        <p><?php _e( 'Posted on', 'cream' ); ?> <span><?php the_modified_date(); ?></span> <?php _e( 'by', 'cream' ); ?> <span><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a></span></p> 
                     </div>                     
                 </header>                 
                 <div class="entry-content"> 
@@ -21,13 +21,13 @@
             </article>
         <?php endwhile; ?>
     <?php else : ?>
-        <p><?php _e( 'Sorry, no posts matched your criteria.', 'cream_wp' ); ?></p>
+        <p><?php _e( 'Sorry, no posts matched your criteria.', 'cream' ); ?></p>
     <?php endif; ?> 
     <nav class="container navigation post-navigation pt-3 pb-3"> 
-        <h2 class="sr-only"><?php _e( 'Post navigation', 'cream_wp' ); ?></h2> 
+        <h2 class="sr-only"><?php _e( 'Post navigation', 'cream' ); ?></h2> 
         <div class="row nav-links justify-content-between"> 
-            <span class="nav-previous"><?php previous_post_link( '%link', __( '&laquo; %title', 'cream_wp' ) ); ?></span> 
-            <span class="nav-next"><?php next_post_link( '%link', __( '%title &raquo;', 'cream_wp' ) ); ?></span> 
+            <span class="nav-previous"><?php previous_post_link( '%link', __( '&laquo; %title', 'cream' ) ); ?></span> 
+            <span class="nav-next"><?php next_post_link( '%link', __( '%title &raquo;', 'cream' ) ); ?></span> 
         </div>         
         <!-- .nav-links -->         
     </nav>     

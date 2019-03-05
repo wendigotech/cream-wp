@@ -20,7 +20,7 @@
             </article>
         <?php endwhile; ?>
     <?php else : ?>
-        <p><?php _e( 'Sorry, no posts matched your criteria.', 'cream_wp' ); ?></p>
+        <p><?php _e( 'Sorry, no posts matched your criteria.', 'cream' ); ?></p>
     <?php endif; ?> 
     <?php if ( comments_open() || get_comments_number() || is_page() ) : ?>
         <?php comments_template( '/comments.php' ); ?>

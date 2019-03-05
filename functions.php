@@ -8,7 +8,7 @@ function st2_setup() {
      * Translations can be filed in the /languages/ directory.
      */
     /* Pinegrow generated Load Text Domain Begin */
-    load_theme_textdomain( 'cream_wp', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'cream', get_template_directory() . '/languages' );
     /* Pinegrow generated Load Text Domain End */
 
     // Add default posts and comments RSS feed links to head.
@@ -90,7 +90,7 @@ function st2_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
-        'name' => __( 'Hero Slider', 'cream_wp' ),
+        'name' => __( 'Hero Slider', 'cream' ),
         'id' => 'hero',
         'description' => 'Hero slider area. Place two or more widgets here and they will slide!',
         'before_widget' => '<div class="carousel-item">',
@@ -100,17 +100,7 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Hero Canvas', 'cream_wp' ),
-        'id' => 'herocanvas',
-        'description' => 'Full size canvas hero area for Bootstrap and other custom HTML markup',
-        'before_widget' => '',
-        'after_widget' => '',
-        'before_title' => '',
-        'after_title' => ''
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Top Full', 'cream_wp' ),
+        'name' => __( 'Top Full', 'cream' ),
         'id' => 'statichero',
         'description' => 'Full top widget with dynamic grid',
         'before_widget' => '<div id="%1$s" class="static-hero-widget %2$s '. st2_slbd_count_widgets( 'statichero' ) .'">',
@@ -120,8 +110,38 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'End Full', 'cream_wp' ),
-        'id' => 'endfull',
+        'name' => __( 'Hero Canvas', 'cream' ),
+        'id' => 'herocanvas',
+        'description' => 'Full size canvas hero area for Bootstrap and other custom HTML markup',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => ''
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Left Sidebar', 'cream' ),
+        'id' => 'left-sidebar',
+        'description' => 'Left Sidebar widget area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Right Sidebar', 'cream' ),
+        'id' => 'right-sidebar',
+        'description' => 'Right Sidebar widget area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Bottom Full', 'cream' ),
+        'id' => 'footerfull',
         'description' => 'Full bottom widget with dynamic grid',
         'before_widget' => '<div id="%1$s" class="footer-widget %2$s '. st2_slbd_count_widgets( 'footerfull' ) .'">',
         'after_widget' => '</div><!-- .footer-widget -->',
@@ -130,9 +150,9 @@ function st2_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => __( 'Bottom Full', 'cream_wp' ),
-        'id' => 'footerfull',
-        'description' => 'Full bottom widget with dynamic grid',
+        'name' => __( 'End Full', 'cream' ),
+        'id' => 'endfull',
+        'description' => 'Full bottom end widget with dynamic grid',
         'before_widget' => '<div id="%1$s" class="footer-widget %2$s '. st2_slbd_count_widgets( 'footerfull' ) .'">',
         'after_widget' => '</div><!-- .footer-widget -->',
         'before_title' => '<h3 class="widget-title">',
@@ -154,20 +174,20 @@ function st2_customize_register( $wp_customize ) {
     /* Pinegrow generated Customizer Controls Begin */
 
     $wp_customize->add_section( 'footer_settings', array(
-        'title' => __( 'ST2 Footer Settings', 'cream_wp' ),
-        'description' => __( 'Footer Settings', 'cream_wp' ),
+        'title' => __( 'ST2 Footer Settings', 'cream' ),
+        'description' => __( 'Footer Settings', 'cream' ),
         'priority' => '2'
     ));
 
     $wp_customize->add_section( 'header_settings', array(
-        'title' => __( 'ST2 Header Settings', 'cream_wp' ),
-        'description' => __( 'Header Settings', 'cream_wp' ),
+        'title' => __( 'ST2 Header Settings', 'cream' ),
+        'description' => __( 'Header Settings', 'cream' ),
         'priority' => '1'
     ));
 
     $wp_customize->add_section( 'theme_settings', array(
-        'title' => __( 'ST2 Theme Settings', 'cream_wp' ),
-        'description' => __( 'Theme Settings > CAUTION: Work in Progress', 'cream_wp' ),
+        'title' => __( 'ST2 Theme Settings', 'cream' ),
+        'description' => __( 'Theme Settings > CAUTION: Work in Progress', 'cream' ),
         'priority' => '0'
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
@@ -178,8 +198,8 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( 'show_jumbotron', array(
-        'label' => __( 'Show Jumbotron', 'cream_wp' ),
-        'description' => __( 'Activate the Jumbotron. Note: It will be visible on ALL the theme templates. If you need a selective display, use the Hero slider or  Hero Canvas widgets and the Widget Logic plugin.', 'cream_wp' ),
+        'label' => __( 'Show Jumbotron', 'cream' ),
+        'description' => __( 'Activate the Jumbotron. Note: It will be visible on ALL the theme templates. If you need a selective display, use the Hero slider or  Hero Canvas widgets and the Widget Logic plugin.', 'cream' ),
         'type' => 'checkbox',
         'section' => 'header_settings'
     ));
@@ -190,7 +210,7 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_bg_color', array(
-        'label' => __( 'Jumbotron Background color', 'cream_wp' ),
+        'label' => __( 'Jumbotron Background color', 'cream' ),
         'type' => 'color',
         'section' => 'header_settings'
     ) ) );
@@ -201,7 +221,7 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'jumbotron_bg_image', array(
-        'label' => __( 'Jumbotron Background image', 'cream_wp' ),
+        'label' => __( 'Jumbotron Background image', 'cream' ),
         'type' => 'media',
         'mime_type' => 'image',
         'section' => 'header_settings'
@@ -213,7 +233,7 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_heading_color', array(
-        'label' => __( 'Jumbotron Heading Color', 'cream_wp' ),
+        'label' => __( 'Jumbotron Heading Color', 'cream' ),
         'type' => 'color',
         'section' => 'header_settings'
     ) ) );
@@ -224,10 +244,34 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_text_color', array(
-        'label' => __( 'Jumbotron Paragraph Color', 'cream_wp' ),
+        'label' => __( 'Jumbotron Paragraph Color', 'cream' ),
         'type' => 'color',
         'section' => 'header_settings'
     ) ) );
+
+    $wp_customize->add_setting( 'show_left_sidebar', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'show_left_sidebar', array(
+        'label' => __( 'Show Left Sidebar', 'cream' ),
+        'description' => __( 'Activate the Left Sidebar', 'cream' ),
+        'type' => 'checkbox',
+        'section' => 'theme_settings'
+    ));
+
+    $wp_customize->add_setting( 'show_right_sidebar', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'show_right_sidebar', array(
+        'label' => __( 'Show Right Sidebar', 'cream' ),
+        'description' => __( 'Activate the Right Sidebar', 'cream' ),
+        'type' => 'checkbox',
+        'section' => 'theme_settings'
+    ));
 
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',
@@ -236,7 +280,7 @@ function st2_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( 'footer_text', array(
-        'label' => __( 'Footer Content', 'cream_wp' ),
+        'label' => __( 'Footer Content', 'cream' ),
         'type' => 'textarea',
         'section' => 'footer_settings'
     ));
@@ -273,15 +317,6 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
     wp_deregister_style( 'woocommerce' );
     wp_enqueue_style( 'woocommerce', get_template_directory_uri() . '/css/woocommerce.css', false, null, 'all');
-
-    wp_deregister_style( 'style-1' );
-    wp_enqueue_style( 'style-1', 'https://fonts.googleapis.com/css?family=Podkova', false, null, 'all');
-
-    wp_deregister_style( 'style-2' );
-    wp_enqueue_style( 'style-2', 'https://fonts.googleapis.com/css?family=Cookie', false, null, 'all');
-
-    wp_deregister_style( 'style-3' );
-    wp_enqueue_style( 'style-3', 'https://fonts.googleapis.com/css?family=Shanti', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
