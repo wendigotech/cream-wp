@@ -21,7 +21,7 @@
                  ?> 
                 <div class="entry-content"> 
                     <?php the_excerpt( ); ?> 
-                    <a class="btn btn-secondary" href="<?php echo esc_url( get_permalink() ); ?>"><?php _e( 'Read More', 'cream' ); ?></a> 
+                    <a class="btn btn-danger" href="<?php echo esc_url( get_permalink() ); ?>"><?php _e( 'Read More', 'cream' ); ?></a> 
                 </div>                 
                 <footer class="entry-footer"></footer>                 
             </article>
