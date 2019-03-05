@@ -333,6 +333,9 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
     wp_deregister_style( 'style-5' );
     wp_enqueue_style( 'style-5', 'https://fonts.googleapis.com/css?family=Acme', false, null, 'all');
 
+    wp_deregister_style( 'style-6' );
+    wp_enqueue_style( 'style-6', 'https://fonts.googleapis.com/css?family=Catamaran', false, null, 'all');
+
     /* Pinegrow generated Enqueue Styles End */
 
     }

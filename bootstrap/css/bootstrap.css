@@ -43,6 +43,8 @@
 *::after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: Catamaran;
+    font-weight: 600;
 }
 
 html {
