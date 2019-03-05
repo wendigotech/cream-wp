@@ -25,14 +25,11 @@
                     <nav class="navbar bg-primary navbar-dark navbar-expand-lg"> 
                         <div class="container">
                             <div class="row no-gutters d-flex flex-column align-items-center justify-content-center align-content-center">
-                                <?php if ( ! has_custom_logo() ) : ?>
-                                    <div> 
-                                        <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
-                                    </div>
-                                <?php else : ?>
-                                    <?php the_custom_logo(); ?>
-                                <?php endif; ?>
-                                <h1 class="text-white text-center"><?php bloginfo( 'name' ); ?></h1>
+                                <?php if ( ! has_custom_logo() ) : ?><div> 
+                                    <a rel="home" class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
+                                </div>
+                                <?php else : ?><?php the_custom_logo(); ?><?php endif; ?>
+                                <h1 class="text-white text-center" href="<?php echo esc_url( home_url() ); ?>"><?php _e( 'Cream Catering Supplies', 'cream' ); ?></h1>
                             </div>
                             
                             <div class="row">
@@ -40,16 +37,14 @@
                                     <span class="navbar-toggler-icon"></span> 
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarToggler6"> 
-                                    <?php if ( has_nav_menu( 'primary' ) ) : ?>
-                                        <?php wp_nav_menu( array(
+                                    <?php if ( has_nav_menu( 'primary' ) ) : ?><?php wp_nav_menu( array(
                                                 'menu' => 'primary',
                                                 'menu_class' => 'navbar-nav mt-2 mt-lg-0 ml-auto',
                                                 'container' => '',
                                                 'depth' => '2',
                                                 'fallback_cb' => 'wp_bootstrap4_navwalker::fallback',
                                                 'walker' => new wp_bootstrap4_navwalker()
-                                        ) ); ?>
-                                    <?php endif; ?> 
+                                        ) ); ?><?php endif; ?>                                     
                                 </div>
                             </div>
                             
